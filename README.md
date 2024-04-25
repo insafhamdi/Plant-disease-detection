@@ -1,6 +1,6 @@
 # Plant-disease-detection
 
-Welcome to the repository for the project "Identification of Plant Leaf Diseases Using a 9-layer Deep Convolutional Neural Network". This project, published on 18 April 2019, Version 1, aims to leverage deep learning techniques implemented in PyTorch to automatically identify various plant leaf diseases from images.
+Welcome to the repository for the project "Identification of Plant Leaf Diseases Using a 9-layer Deep Convolutional Neural Network". This project, aims to leverage deep learning techniques implemented in PyTorch to automatically identify various plant leaf diseases from images.
 
 ## About
 
