@@ -1,27 +1,77 @@
-# Plant-disease-detection
+# Plant Leaf Disease Detection 
 
-Welcome to the repository for the project "Identification of Plant Leaf Diseases Using a 9-layer Deep Convolutional Neural Network". This project, aims to leverage deep learning techniques implemented in PyTorch to automatically identify various plant leaf diseases from images.
+This project leverages a 9-layer deep convolutional neural network (CNN) to identify various plant leaf diseases from images. This is a significant contribution to agricultural research and practical applications in crop management.
 
-## About
+## Project Contents
 
-This repository contains the dataset and potentially the code associated with the research project. The dataset comprises images representing 39 different classes of plant leaves and backgrounds, totaling 61,486 images. To enhance the dataset's diversity and improve model performance, we applied six different augmentation techniques:
+1. **Dataset**: A dataset containing 61,486 images of plant leaves, both diseased and healthy.
+2. **Deep Learning Model**: A 9-layer CNN model developed to classify the images into 39 distinct leaf health categories.
+3. **Training and Evaluation Scripts**: Python scripts used for training the model and evaluating its performance.
+4. **Documentation**: This README and additional documents that help understand and use the project.
 
-- Image Flipping
-- Gamma Correction
-- Noise Injection
-- PCA Color Augmentation
+## Dataset Details
+
+The dataset includes images augmented using various techniques to enhance the model's robustness:
+
+- Flipping
+- Gamma correction
+- Noise injection
+- PCA color augmentation
 - Rotation
 - Scaling
 
-## PyTorch Implementation
+### Dataset Classes
 
-The deep learning model for this project is implemented using PyTorch, a popular deep learning framework known for its flexibility and ease of use. PyTorch provides powerful tools for building and training deep neural networks, making it an excellent choice for this project.
+Images are classified into 39 categories, including specific diseases and healthy leaves.
+1. Apple_scab
+2. Apple_black_rot
+3. Apple_cedar_apple_rust
+4. Apple_healthy
+5. Background_without_leaves
+6. Blueberry_healthy
+7. Cherry_powdery_mildew
+8. Cherry_healthy
+9. Corn_gray_leaf_spot
+10. Corn_common_rust
+11. Corn_northern_leaf_blight
+12. Corn_healthy
+13. Grape_black_rot
+14. Grape_black_measles
+15. Grape_leaf_blight
+16. Grape_healthy
+17. Orange_huanglongbing
+18. Peach_bacterial_spot
+19. Peach_healthy
+20. Pepper_bacterial_spot
+21. Pepper_healthy
+22. Potato_early_blight
+23. Potato_healthy
+24. Potato_late_blight
+25. Raspberry_healthy
+26. Soybean_healthy
+27. Squash_powdery_mildew
+28. Strawberry_healthy
+29. Strawberry_leaf_scorch
+30. Tomato_bacterial_spot
+31. Tomato_early_blight
+32. Tomato_healthy
+33. Tomato_late_blight
+34. Tomato_leaf_mold
+35. Tomato_septoria_leaf_spot
+36. Tomato_spider_mites_two-spotted_spider_mite
+37. Tomato_target_spot
+38. Tomato_mosaic_virus
+39. Tomato_yellow_leaf_curl_virus
 
-## Contributors
+## Deep Learning Model
 
-- **Babacar Gaye**
-- **Adam Baccouche**
+The core of this project is a 9-layer convolutional neural network model, designed to efficiently classify images into different categories of leaf diseases. The model was trained using TensorFlow and Keras.
 
-### Dataset
+### Architecture
 
-The dataset contains images of 39 different classes of plant leaves and backgrounds, along with augmentation techniques applied.
+Details about the model architecture, including layer types, activation functions, etc.
+
+### Training
+
+Explain how the model was trained, including details such as learning rate, evaluation metrics, number of epochs, etc.
+
