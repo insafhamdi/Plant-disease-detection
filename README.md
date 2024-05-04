@@ -1,6 +1,6 @@
 # Plant Leaf Disease Detection 
 
-This project leverages a 7-layer deep convolutional neural network (CNN) to identify various plant leaf diseases from images. This is a significant contribution to agricultural research and practical applications in crop management.
+This project leverages a 7-layer (2 Convolutional Layers, 2 Pooling Layers, 3 Fully Connected Layers) deep convolutional neural network (CNN) to identify various plant leaf diseases from images. This is a significant contribution to agricultural research and practical applications in crop management.
 
 ## Project Contents
 
