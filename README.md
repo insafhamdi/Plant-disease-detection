@@ -1,12 +1,12 @@
 # Plant Leaf Disease Detection 
 
-This project leverages a 9-layer deep convolutional neural network (CNN) to identify various plant leaf diseases from images. This is a significant contribution to agricultural research and practical applications in crop management.
+This project leverages a 7-layer deep convolutional neural network (CNN) to identify various plant leaf diseases from images. This is a significant contribution to agricultural research and practical applications in crop management.
 
 ## Project Contents
 
 1. **Dataset**: A dataset containing 61,486 images of plant leaves, both diseased and healthy.
-2. **Deep Learning Model**: A 9-layer CNN model developed to classify the images into 39 distinct leaf health categories.
-3. **Training and Evaluation Scripts**: Python scripts used for training the model and evaluating its performance.
+2. **Deep Learning Model**: Two 7-layer CNN models developed to classify the images into 39 distinct leaf health categories.
+3. **Training and Evaluation Scripts**: Python scripts used for training the models and evaluating their performance.
 4. **Documentation**: This README and additional documents that help understand and use the project.
 
 ## Dataset Details
@@ -65,7 +65,7 @@ Images are classified into 39 categories, including specific diseases and health
 
 ## Deep Learning Model
 
-The core of this project is a 9-layer convolutional neural network model, designed to efficiently classify images into different categories of leaf diseases. The model was trained using TensorFlow and Keras.
+The core of this project involves two 7-layer convolutional neural network models, designed to efficiently classify images into different categories of leaf diseases. The models were trained using PyTorch.
 
 ### Architecture
 
@@ -73,5 +73,4 @@ Details about the model architecture, including layer types, activation function
 
 ### Training
 
-Explain how the model was trained, including details such as learning rate, evaluation metrics, number of epochs, etc.
-
+Explain how the models were trained, including details such as learning rate, evaluation metrics, number of epochs, etc.
