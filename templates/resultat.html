@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Custom Stylesheets -->
+
+  <link rel="stylesheet" href="../static/assets/css/index.css">
+    <title>Résultats de prédiction</title>
+</head>
+<body>
+     
+     
+    <div id="predictions">
+        {% for prediction in predictions %}
+            <div>
+                 
+                <p>Nom de l image: {{ prediction["Image"] }}</p>
+                <p>Predicted Class: {{ prediction["Predicted Class"] }}</p>
+                <p>Confidence: {{ prediction["Confidence"] }}%</p>
+            </div>
+        {% endfor %}
+    </div>
+
+
+ <!-- RESULT CONTAINER -->
+ <div id="result_container" >
+    <h4 class="display-4">Analysis Report</h4>
+    <div class="container result">
+        <div class="img-result-container img-fluid">
+          <img src="/0" class="crop_img card-img" id="leaf_image" alt="leafimage" >
+        </div>
+
+        <div class="card-body">
+          <p class="card-title">Disease: <span class="card-title" id="disease"></span></p>
+          <p class="card-text">
+            <div id="card-content">
+                <!--
+              <p class="list_content">Name of the image: {{ prediction["Image"] }}</p>
+            -->
+              <p class="list_content">Predicted Class: {{ prediction["Predicted Class"] }}</p>
+              
+              <p class="list_content">Confidence: {{ prediction["Confidence"] }}%</p>
+              
+            </div>
+          
+        </div>
+    </div>
+    <div class="container">
+      <div class="pb-4 text-center">
+       
+          
+         <button class="btn btn-green btn-sm" onclick="analyze_click()"><a href="{{ url_for('main.index') }}" style="text-decoration: none; color: inherit;">Analyze Other Crop</a></button> 
+      </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Faites une requête AJAX pour récupérer les données JSON
+            $.ajax({
+                url: 'http://localhost:5000/resultat', // URL de votre endpoint Flask
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    // Parcourez les données JSON et ajoutez-les à la page HTML
+                    data.forEach(function(prediction) {
+                        var predictionHTML = '<div>';
+                        predictionHTML += '<img src="' + prediction.Image + '" alt="Image">';
+                        predictionHTML += '<p>Predicted Class: ' + prediction["Predicted Class"] + '</p>';
+                        predictionHTML += '<p>Confidence: ' + prediction.Confidence.toFixed(2) + '%</p>';
+                        predictionHTML += '</div>';
+                        $('#predictions').append(predictionHTML);
+                    });
+                },
+                error: function(xhr, status, error) {
+                    console.error('Erreur lors de la récupération des données JSON:', status, error);
+                }
+            });
+        });
+        
+    </script>
+    <script src="../static/assets/js/index.js"></script>
+</body>
+</html>
